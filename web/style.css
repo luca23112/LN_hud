@@ -1,0 +1,141 @@
+:root {
+  --txt: #eef3ff;
+  --muted: #93a4c5;
+  --glass: rgba(11, 16, 26, 0.62);
+  --brd: rgba(255, 255, 255, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Inter, Segoe UI, Arial, sans-serif; }
+body { width: 100vw; height: 100vh; overflow: hidden; color: var(--txt); background: transparent; }
+
+.hud { position: absolute; inset: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease; }
+.hud.hidden { opacity: 0; transform: translateY(10px); }
+
+.glass {
+  border: 1px solid var(--brd);
+  border-radius: 16px;
+  background: linear-gradient(160deg, rgba(21, 30, 48, 0.78), var(--glass));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.35);
+}
+
+.topCenter {
+  position: absolute;
+  left: 50%;
+  top: 1.1rem;
+  transform: translateX(-50%);
+  padding: .42rem .8rem;
+  display: flex;
+  gap: .55rem;
+  align-items: center;
+  font-size: .74rem;
+  color: var(--muted);
+}
+
+.topRight {
+  position: absolute;
+  right: 1.2rem;
+  top: 1.2rem;
+  width: 220px;
+  padding: .6rem .7rem;
+  text-align: right;
+}
+.idline { display: flex; justify-content: space-between; font-size: .7rem; color: var(--muted); }
+.job { margin-top: .35rem; font-size: .78rem; }
+.cash { margin-top: .15rem; font-size: 1.05rem; font-weight: 700; }
+.bank { margin-top: .08rem; font-size: .68rem; color: var(--muted); }
+
+.statusDock {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  padding: .55rem;
+  display: grid;
+  grid-template-columns: repeat(6, 62px);
+  gap: .45rem;
+}
+
+.orb { text-align: center; }
+.orb small { display: block; margin-top: .2rem; font-size: .7rem; opacity: .85; }
+.orb::after { content: attr(data-label); display: block; font-size: .56rem; letter-spacing: .08rem; color: var(--muted); margin-top: .1rem; }
+
+.ring {
+  --p: 100;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(var(--c, #60a5fa) calc(var(--p) * 1%), rgba(255,255,255,.1) 0);
+  display: grid;
+  place-items: center;
+}
+.ring::before {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(12, 18, 30, .96);
+}
+.ring span { position: relative; font-size: .53rem; font-weight: 700; }
+
+.hp .ring { --c: #ef4444; }
+.ar .ring { --c: #60a5fa; }
+.st .ring { --c: #f59e0b; }
+.hg .ring { --c: #10b981; }
+.dr .ring { --c: #0ea5e9; }
+.sx .ring { --c: #d946ef; }
+
+.vehicle {
+  position: absolute;
+  left: 50%;
+  bottom: 1.1rem;
+  transform: translateX(-50%);
+  width: 280px;
+  padding: .65rem;
+}
+
+.dialWrap { position: relative; }
+.dial { width: 220px; height: 220px; margin: 0 auto; display:block; }
+.dialTrack { fill:none; stroke: rgba(255,255,255,.1); stroke-width: 14; }
+.dialProgress {
+  fill:none;
+  stroke:#67e8f9;
+  stroke-width: 14;
+  stroke-linecap: round;
+  stroke-dasharray: 578;
+  stroke-dashoffset: 578;
+  transform: rotate(135deg);
+  transform-origin: 110px 110px;
+}
+.needle {
+  stroke: #f43f5e;
+  stroke-width: 4;
+  stroke-linecap: round;
+  transform-origin: 110px 110px;
+  transform: rotate(-135deg);
+}
+.hub { fill: #ffffff; }
+
+.speedData { position: absolute; inset: 0; display:grid; place-content:center; text-align:center; }
+.speedData small { color: var(--muted); font-size: .6rem; letter-spacing: .18rem; }
+.speedData h1 { font-size: 2.2rem; line-height: 1; }
+.fuel { display:flex; justify-content: space-between; margin-top: .35rem; font-size: .66rem; color: var(--muted); }
+.fuelLine { width: 115px; height: 8px; border-radius:999px; background: rgba(255,255,255,.12); margin-top: .2rem; overflow:hidden; }
+#fuelBar { display:block; width: 0%; height:100%; background: linear-gradient(90deg, #84cc16, #22c55e); }
+
+.voice {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  padding: .38rem .55rem;
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  font-size: .72rem;
+}
+.badge { border: 1px solid var(--brd); border-radius: 999px; padding: .2rem .5rem; font-size: .62rem; letter-spacing: .06rem; }
+.badge.talking { color: #67e8f9; border-color: rgba(103,232,249,.9); }
+
+.hidden { display: none; }
