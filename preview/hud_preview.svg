@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#757575"/>
+
+  <rect x="1320" y="18" width="245" height="128" rx="10" fill="#3b2a2a" fill-opacity="0.68" stroke="#ffffff30"/>
+  <text x="1340" y="43" fill="#fff" font-family="Arial" font-size="12">ID #1</text>
+  <text x="1545" y="43" fill="#fff" font-family="Arial" font-size="12" text-anchor="end">90ms</text>
+  <text x="1545" y="82" fill="#fff" font-family="Arial" font-size="42" font-weight="700" text-anchor="end">$49 900</text>
+  <text x="1545" y="112" fill="#fff" font-family="Arial" font-size="30" font-weight="700" text-anchor="end">$301 930</text>
+  <text x="1545" y="132" fill="#fff" font-family="Arial" font-size="14" text-anchor="end">Berufsfeuerwehr</text>
+
+  <rect x="20" y="730" width="340" height="145" rx="12" fill="#2f2f2f" fill-opacity="0.42" stroke="#ffffff40"/>
+  <text x="32" y="760" fill="#fff" font-family="Arial" font-size="20">⚡ Hanger Way</text>
+  <text x="32" y="785" fill="#fff" font-family="Arial" font-size="18">N   Cypress Flats</text>
+  <text x="320" y="760" fill="#fff" font-family="Arial" font-size="18" text-anchor="end">13:53:25</text>
+
+  <g transform="translate(40,822)">
+    <circle cx="0" cy="0" r="24" fill="#2a2a2a"/><circle cx="0" cy="0" r="24" fill="none" stroke="#ff4d4f" stroke-width="6" stroke-dasharray="120" stroke-dashoffset="25"/>
+    <circle cx="62" cy="0" r="24" fill="#2a2a2a"/><circle cx="62" cy="0" r="24" fill="none" stroke="#faad14" stroke-width="6" stroke-dasharray="120" stroke-dashoffset="68"/>
+    <circle cx="124" cy="0" r="24" fill="#2a2a2a"/><circle cx="124" cy="0" r="24" fill="none" stroke="#40a9ff" stroke-width="6" stroke-dasharray="120" stroke-dashoffset="45"/>
+    <circle cx="186" cy="0" r="24" fill="#2a2a2a"/><circle cx="186" cy="0" r="24" fill="none" stroke="#36cfc9" stroke-width="6" stroke-dasharray="120" stroke-dashoffset="36"/>
+    <circle cx="248" cy="0" r="24" fill="#2a2a2a"/><circle cx="248" cy="0" r="24" fill="none" stroke="#d3adf7" stroke-width="6" stroke-dasharray="120" stroke-dashoffset="80"/>
+  </g>
+
+  <rect x="1290" y="580" width="292" height="292" rx="16" fill="#000" fill-opacity="0.45" stroke="#fff" stroke-opacity="0.2"/>
+  <circle cx="1436" cy="726" r="116" fill="none" stroke="#ffffff40" stroke-width="15"/>
+  <path d="M1337 810 A116 116 0 1 1 1514 626" fill="none" stroke="#fff" stroke-width="15" stroke-linecap="round"/>
+  <line x1="1436" y1="726" x2="1513" y2="684" stroke="#ff4d4f" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="1436" cy="726" r="6" fill="#fff"/>
+  <text x="1436" y="716" fill="#fff" font-family="Arial" font-size="12" text-anchor="middle">KM/H</text>
+  <text x="1436" y="755" fill="#fff" font-family="Arial" font-size="56" font-weight="700" text-anchor="middle">68</text>
+  <rect x="1340" y="792" width="190" height="10" rx="5" fill="#ffffff40"/>
+  <rect x="1340" y="792" width="112" height="10" rx="5" fill="#95de64"/>
+</svg>
