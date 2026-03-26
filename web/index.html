@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LN Elite HUD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="hud" class="hud">
+      <section class="topCenter glass">
+        <span id="direction">N</span>
+        <span>•</span>
+        <span id="street">Unbekannte Straße</span>
+        <span>•</span>
+        <span id="time">00:00</span>
+      </section>
+
+      <section class="topRight glass">
+        <div class="idline">
+          <span>#<b id="playerId">0</b></span>
+          <span id="ping">0ms</span>
+        </div>
+        <div class="job" id="job">Bürger</div>
+        <div class="cash" id="cash">$0</div>
+        <div class="bank" id="bank">Bank: $0</div>
+      </section>
+
+      <section class="statusDock glass">
+        <article class="orb hp" data-label="HP"><div class="ring" id="healthRing"><span id="healthValue">100%</span></div><small>❤</small></article>
+        <article class="orb ar" data-label="AR"><div class="ring" id="armorRing"><span id="armorValue">0%</span></div><small>🛡</small></article>
+        <article class="orb st" data-label="ST"><div class="ring" id="staminaRing"><span id="staminaValue">0%</span></div><small>⚡</small></article>
+        <article class="orb hg" data-label="HG"><div class="ring" id="hungerRing"><span id="hungerValue">100%</span></div><small>🍔</small></article>
+        <article class="orb dr" data-label="DR"><div class="ring" id="thirstRing"><span id="thirstValue">100%</span></div><small>💧</small></article>
+        <article class="orb sx" data-label="SX"><div class="ring" id="stressRing"><span id="stressValue">0%</span></div><small>🧠</small></article>
+      </section>
+
+      <section id="vehicle" class="vehicle glass hidden">
+        <div class="dialWrap">
+          <svg class="dial" viewBox="0 0 220 220">
+            <circle cx="110" cy="110" r="92" class="dialTrack"/>
+            <circle cx="110" cy="110" r="92" class="dialProgress" id="speedStroke"/>
+            <line x1="110" y1="110" x2="110" y2="38" id="needle" class="needle"/>
+            <circle cx="110" cy="110" r="6" class="hub"/>
+          </svg>
+          <div class="speedData">
+            <small>KM/H</small>
+            <h1 id="speed">0</h1>
+            <div class="fuel"><span>Fuel</span><b id="fuelValue">0%</b></div>
+            <div class="fuelLine"><i id="fuelBar"></i></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="voice glass">
+        <span id="voice" class="badge">STUMM</span>
+        <span id="voiceRange">0m</span>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
